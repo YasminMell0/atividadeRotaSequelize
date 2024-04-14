@@ -1,0 +1,59 @@
+<div class="container text-center bg-body-tertiary">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div>
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+    <div class="col bg-white">
+            <table class="rounded table table-striped-columns">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Origem </th>
+                        <th scope="col">Data de contato</th>
+                        <th scope="col">Observacao</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody >
+                {{#each post}}
+                    {{#dataValues}}
+                    <tr>
+                        <td>{{nome}}</td>
+                        <td>{{telefone}}</td>
+                        <td>{{origem}}</td>
+                        <td>{{data_contato}}</td>
+                        <td>{{observacao}}</td>
+                        <td>
+                            <button type="button" class="btn btn-dark"><a href="/editar/{{id}}" style="color:inherit" style="margin-bottom: 0.5rem">Editar</a></button>
+                            <button type="button" class="btn btn-dark"><a href="/excluir/{{id}}" style="color:inherit">Excluir</a></button>
+                        </td>
+                    </tr>
+                    {{/dataValues}}
+                {{/each}}
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+</div>
+</div>
